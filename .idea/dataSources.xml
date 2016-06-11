@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2690028581">
+    <data-source source="LOCAL" name="dataSrc" uuid="97ed1be3-5820-4be6-bc91-946e28e328e9">
+      <driver-ref>aAhBmsep123</driver-ref>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>$PROJECT_DIR$/src/spring.xml</remarks>
+      <jdbc-driver>null</jdbc-driver>
+      <jdbc-url>com.mysql.jdbc.Driverbc.Driver</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+    </data-source>
+    <data-source source="LOCAL" name="dataSrc" uuid="fe757d16-101f-47cf-8c07-77369d67ff81">
+      <driver-ref>aAhBmsep123</driver-ref>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>$PROJECT_DIR$/src/spring.mysql.xml</remarks>
+      <jdbc-driver>null</jdbc-driver>
+      <jdbc-url>com.mysql.jdbc.Driver</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+    </data-source>
+    <data-source source="LOCAL" name="dataSrc" uuid="7309f7f8-23b2-4703-965c-73bf0812e3ae">
+      <driver-ref>aAhBmsep123</driver-ref>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>$PROJECT_DIR$/bin/spring.both.xml</remarks>
+      <jdbc-driver>null</jdbc-driver>
+      <jdbc-url>com.mysql.jdbc.Driver</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+    </data-source>
+    <data-source source="LOCAL" name="SessionFactory/Hibernate" uuid="d25469ea-2030-441f-b702-c9023ccd4f54">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/bin/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/MW_DICTIONARY?autoReconnect=true</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="dataSrc" uuid="8ee3db06-7566-4bb6-966f-705156131113">
+      <driver-ref>aAhBmsep123</driver-ref>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>$PROJECT_DIR$/bin/spring.mysql.xml</remarks>
+      <jdbc-driver>null</jdbc-driver>
+      <jdbc-url>com.mysql.jdbc.Driver</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+    </data-source>
+    <data-source source="LOCAL" name="dataSrc" uuid="8b529202-138f-4d22-9fc8-9f567416f25c">
+      <driver-ref>aAhBmsep123</driver-ref>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>$PROJECT_DIR$/src/spring.both.xml</remarks>
+      <jdbc-driver>null</jdbc-driver>
+      <jdbc-url>com.mysql.jdbc.Driver</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+    </data-source>
+    <data-source source="LOCAL" name="MySQL - MW_DICTIONARY@localhost2" uuid="241570fe-6aa8-4856-9a3e-75ca14ada52c">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/MW_DICTIONARY</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>

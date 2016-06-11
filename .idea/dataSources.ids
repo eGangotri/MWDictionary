@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="dataSrc" uuid="97ed1be3-5820-4be6-bc91-946e28e328e9">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="dataSrc" uuid="fe757d16-101f-47cf-8c07-77369d67ff81">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="dataSrc" uuid="7309f7f8-23b2-4703-965c-73bf0812e3ae">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="SessionFactory/Hibernate" uuid="d25469ea-2030-441f-b702-c9023ccd4f54">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="dataSrc" uuid="8ee3db06-7566-4bb6-966f-705156131113">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="dataSrc" uuid="8b529202-138f-4d22-9fc8-9f567416f25c">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - MW_DICTIONARY@localhost2" uuid="241570fe-6aa8-4856-9a3e-75ca14ada52c">
+    <database-info product="MySQL" version="5.6.23-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="mw_dictionary"/>
+      <table id="2" parent="1" name="word"/>
+      <column id="3" parent="2" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="4" parent="2" name="WORD">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="5" parent="2" name="MEANING">
+        <mandatory>1</mandatory>
+        <data-type>varchar(9000)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="6" parent="2" name="WORDINSLP">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="7" parent="2" name="WORDINITRANS">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="8" parent="2" name="WORDINDVN">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="9" parent="2" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	
+	<bean id="propertyConfigurer" 
+	class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location" value="mysql.properties"/>
+    </bean>  
+
+	<bean id="WordMaster" class="com.egangotri.vo.WordMaster">
+	</bean>
+	
+	<bean id="ClickLogMaster" class="com.egangotri.vo.ClickLogMaster">
+	</bean>
+	
+	<bean id="MainClass" class="com.egangotri.main.MainClass">
+	</bean>
+	
+	<bean id="XMLConverter" class="com.egangotri.main.XMLConverter">
+	</bean>
+	
+	<bean id="DictionaryDAOSupport" class="com.egangotri.dao.DictionaryDAOSupport">
+	<property name="sessionFactory">
+	<ref bean="sessionFac"/>
+	</property>
+	</bean>
+	
+	<bean id="DictionaryService" class="com.egangotri.service.DictionaryService">
+		<property name="dictionaryDAO">
+	<ref bean="DictionaryDAOSupport"/>
+	</property>
+	</bean>
+	
+	<bean id="sessionFac" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+	
+	<property name="mappingResources">    
+	<list>      
+		<value>com/egangotri/vo/WordMaster.hbm.xml</value>
+		<value>com/egangotri/vo/ClickLogMaster.hbm.xml</value>
+	  </list>  
+	  </property>
+	  
+	  <property name="dataSource">
+			<ref bean="dataSrc"/>
+		</property>
+	  
+	  	<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.jdbc.batch_size">15</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.DerbyDialect</prop>
+			</props>
+		</property>
+	</bean>
+	
+		<bean id="dataSrc" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+          <property name="driverClassName">
+            <value>${db.driver}</value>
+          </property>
+          <property name="url">
+            <value>${db.url}</value>
+          </property>
+          <property name="username">
+            <value>${db.username}</value>
+          </property>
+          <property name="password">
+            <value>${db.password}</value>
+          </property>
+          <property name="maxActive">
+            <value>20</value>
+          </property>
+          <property name="removeAbandoned">
+            <value>true</value>
+          </property>
+        </bean>
+        
+		</beans>
