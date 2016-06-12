@@ -4,6 +4,7 @@ import com.egangotri.util.DictionaryConstants
 import com.egangotri.vo.WordMaster
 import groovy.sql.GroovyRowResult
 import groovy.sql.Sql
+import groovy.util.logging.Slf4j
 import org.apache.commons.lang3.StringUtils
 
 // Please note.
@@ -23,16 +24,28 @@ import org.apache.commons.lang3.StringUtils
  * COLLATE=utf8_bin COMMENT='InnoDB free: 6144 kB';
  */
 
+@Slf4j
 class DBUtil {
     static Sql connection
+    static String database = 'MW_DICTIONARY'
+    static String TABLE_NAME = "${database}.Word"
+    static Boolean useMySql = false
 
     static Sql getConnection() {
         if (connection == null) {
-            def username = 'root', database = 'MW_DICTIONARY', server = 'localhost'
-            String mySqlUrl = "jdbc:mysql://$server/$database"
-            connection = Sql.newInstance(mySqlUrl, username, "", 'com.mysql.jdbc.Driver')
+            if (useMySql) {
+                String username = 'root'
+                String server = 'localhost'
+                String mySqlUrl = "jdbc:mysql://$server/$database"
+                connection = Sql.newInstance(mySqlUrl, username, "", 'com.mysql.jdbc.Driver')
+            } else {
+                URL url = DBUtil.class.getClassLoader().getResource("db/$database")
+                println url.path
+                String derbyUrl = "jdbc:derby:" + (url.path - "/")
+                println derbyUrl
+                connection = Sql.newInstance(derbyUrl, "", "", 'org.apache.derby.jdbc.EmbeddedDriver')
+            }
         }
-
         return connection
     }
 
@@ -40,8 +53,9 @@ class DBUtil {
     static List<GroovyRowResult> fetchRows(String query) {
         return getConnection().rows(query, 1, DictionaryConstants.DICTIONARY_MAX_RESULTS_ALLOWED)
     }
+
     static WordMaster findWord(int id) {
-        GroovyRowResult result = getConnection().firstRow("select * from Word where id = $id")
+        GroovyRowResult result = getConnection().firstRow("select * from $TABLE_NAME where id = $id")
         WordMaster word = dbRowToWord(result)
         return word
     }
@@ -66,17 +80,17 @@ class DBUtil {
     }
 
     static ArrayList<WordMaster> findWord(int beginRowId, int endRowId) {
-        List<GroovyRowResult> rows = fetchRows("select * from Word where id >= $beginRowId and id <= $endRowId")
+        List<GroovyRowResult> rows = fetchRows("select * from $TABLE_NAME where id >= $beginRowId and id <= $endRowId")
         return dbRowsToWord(rows)
     }
 
     static String prepareCountQuery(String searchWord, String searchType) {
-        String query = "select count(*) as count from Word "
+        String query = "select count(*) as count from $TABLE_NAME "
         return prepareQuery(query, searchWord, searchType)
     }
 
     static String prepareReadQuery(String searchWord, String searchType) {
-        String query = "select * from Word "
+        String query = "select * from $TABLE_NAME "
         return prepareQuery(query, searchWord, searchType)
 
     }
