@@ -185,7 +185,7 @@ public class DictionaryService
        // getDictionaryDAO().logUserActivityToDB(moduleName, ipAddress, searchTerm);
     }
     
-//    public String decorateResult(ArrayList<WordMaster> wordList, String entry, String transformedEntry)
+//    public String createBody(ArrayList<WordMaster> wordList, String entry, String transformedEntry)
 //    {
 //        if(wordList == null || wordList.size() == 0){
 //            return "No such Word '<i>" + entry + "</i>' [" + transformedEntry + "]" + " Found";

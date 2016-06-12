@@ -9,16 +9,28 @@ import org.apache.commons.lang3.text.WordUtils
 class DictionaryUtil {
 
     public
-    static String decorateResult(ArrayList<WordMaster> wordList, String entry, String transformedEntry, long count) {
+    static String createHeader(String entry, String transformedEntry, long count) {
+        // Set Notes
+        StringBuilder header = new StringBuilder();
+        String heading = "Found <b>$count Meaning(s)</b> for Search Term: <b>$entry</b>[<b>$transformedEntry</b>]<br>"
+//        if (count > DictionaryConstants.DICTIONARY_MAX_RESULTS_ALLOWED) {
+//            heading += "Only the First ${DictionaryConstants.DICTIONARY_MAX_RESULTS_ALLOWED} Meanings are being shown<br> "
+//        }
+        header.append(heading);
+        return header
+    }
+
+    public
+    static String createBody(ArrayList<WordMaster> wordList, String entry, String transformedEntry, long count) {
         if (!wordList) {
             return "No such Word '<i>" + entry + "</i>' [" + transformedEntry + "]" + " Found";
         }
 
         // Set Notes
         StringBuilder notes = new StringBuilder();
-        String heading = "Found <b>$count Meaning(s)</b> for Search Term: <b>$entry</b>[<b>$transformedEntry</b>]<br>"
+        String heading = "<br>Results for Search Term '<i>" + entry + "</i>' [$transformedEntry]"
         if (count > DictionaryConstants.DICTIONARY_MAX_RESULTS_ALLOWED) {
-            heading += "Only the First ${DictionaryConstants.DICTIONARY_MAX_RESULTS_ALLOWED} Meanings are being shown<br> "
+            heading += "<br><i>Results Restricted to Only the First ${DictionaryConstants.DICTIONARY_MAX_RESULTS_ALLOWED} out of $count Meanings<i><br> "
         }
 
         notes.append(heading);
