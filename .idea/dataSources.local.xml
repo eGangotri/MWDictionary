@@ -2,39 +2,55 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="dataSrc" uuid="97ed1be3-5820-4be6-bc91-946e28e328e9">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <first-sync>true</first-sync>
       <user-name>jdbc:mysql://localhost:3306/MW_DICTIONARYl://localhost:3306/MW_DICTIONARY</user-name>
-      <user-password>dfd9dfc1dfdedfffdfdedfc3dfc6dfd9</user-password>
     </data-source>
     <data-source name="dataSrc" uuid="fe757d16-101f-47cf-8c07-77369d67ff81">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <first-sync>true</first-sync>
       <user-name>jdbc:mysql://localhost:3306/MW_DICTIONARY</user-name>
-      <user-password>dfd9dfc1dfdedfffdfdedfc3dfc6dfd9</user-password>
     </data-source>
     <data-source name="dataSrc" uuid="7309f7f8-23b2-4703-965c-73bf0812e3ae">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <first-sync>true</first-sync>
       <user-name>jdbc:mysql://localhost:3306/MW_DICTIONARY</user-name>
-      <user-password>dfd9dfc1dfdedfffdfdedfc3dfc6dfd9</user-password>
     </data-source>
     <data-source name="SessionFactory/Hibernate" uuid="d25469ea-2030-441f-b702-c9023ccd4f54">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <user-name>sktUtils</user-name>
-      <user-password>dfc0dfcedfc8dfc9df90dfc7dfd3dfd9dfdbdfc6df90df85df85dfc6dfc5dfc9dfcbdfc6dfc2dfc5dfd9dfdedf90df99df99df9adf9cdf85dfe7dffddff5dfeedfe3dfe9dffedfe3dfe5dfe4dfebdff8dff3df95dfcbdfdfdfdedfc5dff8dfcfdfc9dfc5dfc4dfc4dfcfdfc9dfdedf97dfdedfd8dfdfdfcf</user-password>
     </data-source>
     <data-source name="dataSrc" uuid="8ee3db06-7566-4bb6-966f-705156131113">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <first-sync>true</first-sync>
       <user-name>jdbc:mysql://localhost:3306/MW_DICTIONARY</user-name>
-      <user-password>dfd9dfc1dfdedfffdfdedfc3dfc6dfd9</user-password>
     </data-source>
     <data-source name="dataSrc" uuid="8b529202-138f-4d22-9fc8-9f567416f25c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <first-sync>true</first-sync>
       <user-name>jdbc:mysql://localhost:3306/MW_DICTIONARY</user-name>
-      <user-password>dfd9dfc1dfdedfffdfdedfc3dfc6dfd9</user-password>
     </data-source>
     <data-source name="MySQL - MW_DICTIONARY@localhost2" uuid="241570fe-6aa8-4856-9a3e-75ca14ada52c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-pattern>mw_dictionary.*</schema-pattern>
-      <default-schemas>mw_dictionary.*</default-schemas>
+      <introspection-schemas>*:mw_dictionary</introspection-schemas>
+      <resolve-scope>*:mw_dictionary</resolve-scope>
+      <unqualified-resolve-schemas>*:mw_dictionary</unqualified-resolve-schemas>
+    </data-source>
+    <data-source name="Derby (Embedded) - MW_DICTIONARY" uuid="5cfb0ce8-0a48-410a-8ac8-72f483082ef3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <introspection-schemas>*:*</introspection-schemas>
+      <resolve-scope>*:APP</resolve-scope>
+      <unqualified-resolve-schemas>*:APP</unqualified-resolve-schemas>
+    </data-source>
+    <data-source name="Derby (Embedded) - MW_DICTIONARY [2]" uuid="886b99d2-bf89-4542-bdcb-8ee7c56d59e5">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <introspection-schemas>*:*</introspection-schemas>
+      <resolve-scope>*:APP</resolve-scope>
+      <unqualified-resolve-schemas>*:APP</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

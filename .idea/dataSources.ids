@@ -19,48 +19,12 @@
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
   <data-source name="MySQL - MW_DICTIONARY@localhost2" uuid="241570fe-6aa8-4856-9a3e-75ca14ada52c">
-    <database-info product="MySQL" version="5.6.23-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
-      <schema id="1" name="mw_dictionary"/>
-      <table id="2" parent="1" name="word"/>
-      <column id="3" parent="2" name="ID">
-        <mandatory>1</mandatory>
-        <data-type>int(10) unsigned</data-type>
-        <sequence-identity>1</sequence-identity>
-      </column>
-      <column id="4" parent="2" name="WORD">
-        <mandatory>1</mandatory>
-        <data-type>varchar(50)</data-type>
-        <default-expression>&apos;&apos;</default-expression>
-      </column>
-      <column id="5" parent="2" name="MEANING">
-        <mandatory>1</mandatory>
-        <data-type>varchar(9000)</data-type>
-        <default-expression>&apos;&apos;</default-expression>
-      </column>
-      <column id="6" parent="2" name="WORDINSLP">
-        <mandatory>1</mandatory>
-        <data-type>varchar(50)</data-type>
-        <default-expression>&apos;&apos;</default-expression>
-      </column>
-      <column id="7" parent="2" name="WORDINITRANS">
-        <mandatory>1</mandatory>
-        <data-type>varchar(50)</data-type>
-        <default-expression>&apos;&apos;</default-expression>
-      </column>
-      <column id="8" parent="2" name="WORDINDVN">
-        <mandatory>1</mandatory>
-        <data-type>varchar(50)</data-type>
-        <default-expression>&apos;&apos;</default-expression>
-      </column>
-      <key id="9" parent="2" name="PRIMARY">
-        <columns>ID</columns>
-        <primary>1</primary>
-      </key>
-    </database-model>
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Derby (Embedded) - MW_DICTIONARY" uuid="5cfb0ce8-0a48-410a-8ac8-72f483082ef3">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Derby (Embedded) - MW_DICTIONARY [2]" uuid="886b99d2-bf89-4542-bdcb-8ee7c56d59e5">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
 </component>

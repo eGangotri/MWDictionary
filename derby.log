@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Sun Jun 12 17:52:38 SGT 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0155-4407-02e7-0000076e0720 
-on database directory C:\ws\MWDictionary\build\resources\main\db\MW_DICTIONARY with class loader sun.misc.Launcher$AppClassLoader@4e0e2f2a 
+Wed Sep 06 11:21:50 IST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015e-55be-a428-00000a4f5408 
+on database directory C:\ws\MWDictionary\out\production\resources\db\MW_DICTIONARY with class loader sun.misc.Launcher$AppClassLoader@14dad5dc 
 Loaded from file:/C:/Users/user/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.12.1.1/75070c744a8e52a7d17b8b476468580309d5cd09/derby-10.12.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_60-b27

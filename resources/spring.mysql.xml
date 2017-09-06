@@ -4,10 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 	
 	
-	<bean id="WordMaster" class="com.egangotri.vo.WordMaster">
+	<bean id="WordMaster" class="com.egangotri.monierWilliams.dao.vo.WordMaster">
 	</bean>
 	
-	<bean id="ClickLogMaster" class="com.egangotri.vo.ClickLogMaster">
+	<bean id="ClickLogMaster" class="com.egangotri.monierWilliams.dao.vo.ClickLogMaster">
 	</bean>
 	<!-- 
 	<bean id="MainClass" class="MainClass">
@@ -16,16 +16,16 @@
 	</property>
 	</bean>
 	 -->
-	<bean id="XMLConverter" class="com.egangotri.main.XMLConverter">
+	<bean id="XMLConverter" class="com.egangotri.monierWilliams.dao.vo.main.XMLConverter">
 	</bean>
 	
-	<bean id="DictionaryDAOSupport" class="com.egangotri.dao.DictionaryDAOSupport">
+	<bean id="DictionaryDAOSupport" class="com.egangotri.monierWilliams.dao.DictionaryDAOSupport">
 	<property name="sessionFactory">
 	<ref bean="sessionFac"/>
 	</property>
 	</bean>
 	
-	<bean id="DictionaryService" class="com.egangotri.service.DictionaryService">
+	<bean id="DictionaryService" class="com.egangotri.monierWilliams.service.DictionaryService">
 		<property name="dictionaryDAO">
 	<ref bean="DictionaryDAOSupport"/>
 	</property>

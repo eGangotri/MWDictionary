@@ -105,3 +105,12 @@ task fatJar(type: Jar) {
         attributes 'Main-Class': mainClassName
     }
 }
+
+task derbyJar(type: Jar){
+    baseName = project.name + '-derbyEmbeddedDB'
+    from('resources') {
+        include 'db/**'
+    }
+    version=""
+
+}

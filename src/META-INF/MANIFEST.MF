@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: MWSktEngDictionary
-Class-Path: lib/sandhi.jar lib/cglib-nodep-2.1_3.jar lib/commons-collections.jar lib/commons-dbcp.jar lib/commons-lang.jar lib/commons-logging.jar lib/commons-pool.jar lib/derby.jar lib/dom4j-1.6.1.jar  lib/hibernate3.jar  lib/jdom.jar  lib/jta.jar lib/junit.jar lib/log4j.jar lib/mysql-connector-java-3.1.12-bin.jar lib/spring.jar
